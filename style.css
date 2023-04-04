@@ -1,24 +1,20 @@
-:root{
-    --cor-de-fundo: #050544  ;
-    --cor-de-fundo-a:  rgb(38, 21, 192)  ;
-    --cor-de-texto-links: #fff   ;
-    --filtro-lampada: grayscale (1) opacity(0.25);
-}
-.tema-claro{
-    --cor-de-fundo: #434eee;
-    --cor-de-fundo-links: #fff;
-    --cor-de-fundo-a: #434eee;
-    --filtro-lampada: grayscale (1) opacity(1);
-}
-
 *{
     margin: 0;
     padding: 0;
     touch-action: manipulation; /* Faz com que dois toques na tela, não de zoom*/
 }
 
-header{
-    margin-left: 90%;
+:root{
+    --cor-de-fundo: #050544  ;
+    --cor-de-fundo-links:   rgb(33, 17, 172)  ;
+    --cor-de-texto-links: #fff   ;
+    --filtro-lampada: grayscale (1) opacity(0.25);
+}
+.tema-claro{
+    --cor-de-fundo: #434eee;
+    --cor-de-fundo-links: #fff;
+    --cor-de-fundo-links: #434eee;
+    --filtro-lampada: grayscale (1) opacity(1);
 }
 
 .botao-lampada{
@@ -32,7 +28,7 @@ header{
 }
 
 .foto-perfil{
-    width: 99px;
+    width: 80px;
     border-radius: 9999px;
     border: solid #ffffff 1.5px;
     box-shadow: #181818 0 2px 10px;
@@ -52,7 +48,13 @@ header{
 body{
     background: var(--cor-de-fundo);
     -webkit-font-smoothing: antialiased;
+    font-family: "Barlow, sans-serif";
 }
+
+/* .secao-principal{
+    max-width: 1024px;
+    margin: 0 auto;
+} */
 
 .topo{
     display: flex;
@@ -67,30 +69,41 @@ body{
 .box-links{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    font-family: sans-serif; 
-    
+    margin-top: -10px;
 }
 
-a{
+.links{
     display: flex;
-    justify-items: center;
     align-items: center;
+    justify-content: center;
     text-decoration: none;  
-    margin-top: 10px;
+    position: relative;         /* Deixa os icones com a distancia em relação aos links */
+
+    margin-top: 5px;
     padding: 10px; 
     width: 20%;
     height: 30px;
-    border-radius: 2%;
-    text-align: center;
-    background: var(--cor-de-fundo-a); 
+    border-radius: 4%;
+    
+    background: var(--cor-de-fundo-links); 
     color: var(--cor-de-texto-links);
+    
     box-shadow: 0 3px 3px #000;
     transition: 0.3s;
+}
+
+.box-links__icon{
+    position: absolute;
+    left: 15px;
+    font-size: 55px;
 }
 a:hover{
     filter: brightness(0.75);
 }
+
+/* RODAPE */
 
 .rodape__p1{
     display: flex;
@@ -107,16 +120,16 @@ a:hover{
     justify-content: center;
     color: #ffffff;
     font-size: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .message-icon{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    margin-bottom: 35px;
+    margin-bottom: 50px;
     color: #ffffff;
+    font-size: 30px;
 }
 
 .rodape__p3{
