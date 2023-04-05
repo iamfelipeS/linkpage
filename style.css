@@ -1,16 +1,16 @@
 *{
     margin: 0;
     padding: 0;
-    touch-action: manipulation; /* Faz com que dois toques na tela, não de zoom*/
+    touch-action: manipulation; /* Faz com que dois toques acidentais na tela, não de zoom*/
 }
 
 :root{
     --cor-de-fundo: #050544  ;
     --cor-de-fundo-links: #2111ac;
     --cor-de-texto-links: #ffffff;
-
-    --surface-color:#ffffff0d;
-    --surface-color-hover:#00000005;
+    --stroke-color: #fff;
+    
+    --surface-color-hover:#f8f5f5ee;
     --highlight-color:#ffffff33;
     --switch-bg-url:url(./assets/moon-stars.svg);
     
@@ -21,7 +21,6 @@
     --cor-de-texto-links: #60638b;
     
     --stroke-color: #00000080;
-    --surface-color: rgba(0, 0, 0, 0, 0.05);
     --surface-color-hover:#00000005;
     --highlight-color:#0000001a;
     --switch-bg-url: url(./assets/sun.svg);
@@ -174,6 +173,28 @@ a:hover{
     color: #ffffff;
     font-size: 28px;
 }
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #050544; 
+    border-radius: 7px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #050544; 
+    border-radius: 7px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #310891; 
+  }
 
 /* MEDIA QUERY */
 
