@@ -2,7 +2,7 @@
 linkpage 2.0 
 </h1>
 
-<h3 align="center"><a href="https://felipepage.netlify.app/" target="_blank">Acessar projeto</a></h3>
+<h3 align="center"><a href="https://felipepage.netlify.app/" target="_blank" rel="noopener noreferrer">Acessar projeto</a></h3>
 
 
 ## 📕 Sobre
