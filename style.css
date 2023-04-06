@@ -8,9 +8,12 @@
     --cor-de-fundo: #050544  ;
     --cor-de-fundo-links: #2111ac;
     --cor-de-texto-links: #ffffff;
-    --stroke-color: #fff;
     
-    --surface-color-hover:#f8f5f5ee;
+    /* --stroke-color: #fff;
+    --surface-color-hover:#f8f5f5ee; */
+    --stroke-color:rgba(255, 255, 255, 0.5);
+    --surface-color:rgba(255, 255, 255, 0.05);
+    --surface-color-hover:rgba(0, 0, 0, 0.02);
     --highlight-color:#ffffff33;
     --switch-bg-url:url(./assets/moon-stars.svg);
     
@@ -20,8 +23,12 @@
     --cor-de-fundo-links: #ffffff;
     --cor-de-texto-links: #60638b;
     
-    --stroke-color: #00000080;
-    --surface-color-hover:#00000005;
+    /* --stroke-color: #00000080;
+    --surface-color-hover:#00000005; */
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color:rgba(0, 0, 0, 0, 0.05);
+    --surface-color-hover:rgba(0, 0, 0, 0.02);
     --highlight-color:#0000001a;
     --switch-bg-url: url(./assets/sun.svg);
    
@@ -37,12 +44,12 @@
 
 /* botao-switch */
 
-#botao-switch {
-    position: relative;
+#switch {
     width: 64px;
     margin: 4px auto;
+    position: relative;
 }
-#botao-switch button {
+#switch button {
     width: 25px;
     height: 25px;
     background: white var(--switch-bg-url) no-repeat center;
@@ -52,21 +59,32 @@
     position: absolute;
     top: 50%;
     left: 0;
-    z-index: 1;
+    z-index: 10;
     transform: translateY(-50%);
-
+    cursor: pointer;
     animation: slide-back .6s;
 }
-
- #botao-switch button {
-    --animation:slide-in 0.6s forwards;
+#switch:active{
+    transition: .4s;
+    transform: translateX(26px);
 }
-#botao-switch button:hover {
+
+#switch:focus #slide {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+#switch button:hover {
     outline: 8px solid var(--highlight-color);
 }
-#botao-switch span{
+#switch input {
+    display: none;
+}
+
+
+#switch span{
+    
     display: block;
-    width: 44px;
+    width: 50px;
     height: 15px;
     background: var(--surface-color);
     border: 1px solid var(--stroke-color);
@@ -74,6 +92,9 @@
     -webkit-backdrop-filter: blur(4px);
     border-radius: 9999px;
 }    
+
+
+
 
 .foto-perfil{
     width: 80px;
@@ -98,6 +119,7 @@ body{
     background: var(--cor-de-fundo);
     -webkit-font-smoothing: antialiased;
     font-family: "Barlow";
+    transition: 0.3s;
 }
 
 .secao-principal{
@@ -122,11 +144,11 @@ body{
     text-decoration: none;  
     position: relative;         /* Deixa os icones com a distancia em relação aos links */
 
-    margin-top: 5px;
+    margin-top: 10px;
     padding: 8px; 
     width: 20%;
     height: 30px;
-    border-radius: 4%;
+    border-radius: 3%;
     font-family: "Barlow";
     font-size: 17px;
     background: var(--cor-de-fundo-links); 

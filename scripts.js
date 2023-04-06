@@ -1,28 +1,19 @@
-let btSwitch = document.getElementById("#botao-switch")
+let btSwitch = document.getElementById("switch")
 
-function toggleMode() {
-    document.body.classList.toggle('tema-claro');
-}
-
-//load light or dark mode
-function loadTheme() {
-    const temaClaro = localStorage.getItem('tema-claro')
-
-    if (temaClaro) {
-        toggleTemaClaro();
-    }
-}
-
-loadTheme();
 
 let root = document.documentElement
 btSwitch.addEventListener('click', () =>{
-    toggleTemaClaro();
     
-    // save or remove dark mode
-   
+    root.classList.toggle('tema-claro')
 
-    if (document.body.classList.contains('tema-claro')) {
-        localStorage.setItem('tema-claro', 1);
-    }
 })
+
+// function toggleMode() {
+//     const html = document.documentElement
+    
+//     html.classList.toggle('light')
+
+
+//     const img = document.querySelector("#profile img")
+
+// }
